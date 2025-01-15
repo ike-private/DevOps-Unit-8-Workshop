@@ -173,9 +173,9 @@ Once you've updated the code, you can run `func start` again to run the new vers
 
 > This should generate a `launch.json` file so that you can debug the application using the Run & Debug button on the Activity Bar
 
-The function now expects us to send a JSON object to it containing the subtitle to translate, so instead of using the browser to test it, we will use Thunder Client. Open up Thunder Client and select to create a new request (File > New...). 
+The function now expects us to send a JSON object to it containing the subtitle to translate, so instead of using the browser to test it, we will use Postman. Open up Postman and select to create a new request (File > New...). 
 - Set the URL to the URL returned by `func start` command
-- Under the 'Body' tab, select 'JSON'
+- Under the 'Body' tab, select 'raw' and change the 'Text' dropdown to read 'JSON'
 - In the textbox input the following JSON:
 ```
 {
@@ -185,7 +185,7 @@ The function now expects us to send a JSON object to it containing the subtitle 
 - Hit 'Send'
 
 
-![Thunder Client](./images/Thunder-Client-SendRequest.png) 
+![Postman](./images/Postman-SendRequest.png) 
 
 Take a moment to customise the "HttpEndpoint" function a little (by adding parameters to `@app.route`).
 - We only want the function to accept POST requests, so specify this as a `methods` parameter in `@app.route`
@@ -229,7 +229,7 @@ func azure functionapp publish <APP_NAME>
 ```
 > Replace `<APP_NAME>` with the name you chose above for your Function App. Make sure you're in the root directory of the local function project (`AcmeSubProject`) when running the above command
 
-As when running locally, the command should output a URL. You can use this URL in Thunder Client to send a request to the function (don't forget to send the JSON object, as before!).
+As when running locally, the command should output a URL. You can use this URL in Postman to send a request to the function (don't forget to send the JSON object, as before!).
 
 Now that you have your Azure Function setup, you can have a look at the resources you have created in the Azure Portal by selecting your resource group.
 
