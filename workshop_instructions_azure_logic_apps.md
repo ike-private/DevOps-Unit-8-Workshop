@@ -22,10 +22,11 @@ In the same folder as above:
   - If you're using GitPod, you'll need to use `az login --use-device-code`
  - Create a Web App:
  ```
- az webapp up --sku B1 --location uksouth --name <APP_NAME> --resource-group <RG_NAME>
+ az webapp up --sku B1 --location germanywestcentral --name <APP_NAME> --resource-group <RG_NAME>
  ```
 > `<APP_NAME>` should be replaced with a name that is unique across all of Azure (as this application will be hosted at `<APP_NAME>.azurewebsites.net`). For example you could use your initials plus today's date e.g. `abc-01-01-1900-load-testing`. The tutors should provide you with a resource group to contain your resources for this workshop. Replace `<RG_NAME>` with the name of your resource group ending "\_Workshop".
- - The command should return the URL that the application is now hosted on. If you navigate to that URL in your browser it should take around 5 seconds before it loads with a message.
+- The command should return the URL that the application is now hosted on. If you navigate to that URL in your browser it should take around 5 seconds before it loads with a message.
+- We've had to use Germany as the location as deployment to a UK region is blocked by policy in PluralSight's Azure Tenant (have a try with `uksouth` instead)
 
 Now that we have the application running, we're going to use an online service, BlazeMeter, to perform load testing on it. With this tool we can send out a number of requests over a few minutes to see how the application performs.
 
@@ -114,7 +115,7 @@ For this exercise, we're going to use Azure Table storage, which is a NoSQL data
 From your local machine, run the following command to create a Storage Account, or create it through the Azure Portal.
 
 ```
-az storage account create --name <STORAGE_NAME> --location uksouth --resource-group <RG_NAME> --sku Standard_LRS
+az storage account create --name <STORAGE_NAME> --location germanywestcentral --resource-group <RG_NAME> --sku Standard_LRS
 ```
 > Replace `<STORAGE_NAME>` with the name you want to give this storage account, this must be unique across the whole of Azure Storage and contain 3 to 24 numbers or lowercase letters. It is worth making a note of this name as you will use it later.
 
