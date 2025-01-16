@@ -275,6 +275,7 @@ You'll find there's an [existing connector for Microsoft Translator](https://doc
 Without a subscription key we're limited to a throttled connection; if we want to switch to a higher throughput then we'll need to create our own Translator service - add one to your resource group using the "Global" region, and once created update your Translator connection to use a subscription key from your new service.
 
 ## Part 6 (Stretch) - Try out facial recognition
+> WARNING (if using ACG): Before starting this exercise please delete the translation service you created in the previous Part of the exercise (other ACG may delete your sandbox environment due to misuse)
 
 > This exercise requires access to the "Code View" of your logic app - check that you can access that for one of your existing apps before starting.
 

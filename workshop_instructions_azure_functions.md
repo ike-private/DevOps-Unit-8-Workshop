@@ -223,6 +223,8 @@ az functionapp create --resource-group <RG_NAME> --consumption-plan-location ger
 
 > `<STORAGE_NAME>` should be the name of the Storage Account you just created. Replace `<APP_NAME>` with a name that is unique across all of Azure (as this application will be hosted at `<APP_NAME>.azurewebsites.net`). For example you could use your initials plus today's date e.g. `abc-01-01-1900-functions`. It must also differ from the app name you used in Part 1. If you get a "usage error", check that the directory you are in (or any parent directory) doesn't already contain a `.azure/config` file.
 
+> (If using ACG): You may need to delete the App Service (& Service Plan) from Part 1 in order to be able to create the Azure Function App (as it also runs on an App Service Plan behind the scenes).
+
 Now that we have all the resources that we need, we can deploy to Azure.
 
 ```
@@ -418,6 +420,8 @@ Have a look at the [documentation](https://docs.microsoft.com/en-us/azure/cognit
 Make sure the language codes you pass into your function are supported by Translator. You can see a [list of supported languages here.](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/language-support#translate)
 
 ## Part 6 (Optional) - Facial Recognition
+> WARNING (if using ACG): Before starting this exercise please delete the translation service you created in the previous Part of the exercise (other ACG may delete your sandbox environment due to misuse)
+
 
 In this part we're going to create a new application, which will consist of:
 - A web app, hosted on Azure App Service, through which images can be uploaded

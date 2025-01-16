@@ -17,7 +17,7 @@ For this workshop, you'll want to have access to the following tools:
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 * There are two options for this workshop: Logic Apps and Azure Functions. If you do Azure Functions, you'll want [Azure Functions Core Tools version 4.x.](https://docs.microsoft.com/en-gb/azure/azure-functions/functions-run-local#v2)
   * The Function Tools are not required if you are following the alternative exercise
-  * :warning: At time of writing, Azure function tools for Python works with Python 3.7-3.11 on x86(/64) only
+  * At time of writing, Azure function tools for Python works with Python 3.7-3.11 on x86(/64) only
     * If that isn't the version of Python you have installed, you can use an ACG cloud server, or use a dev container with the right version, or (if you know how) try GitHub Codespaces!
 
 # Workshop Instructions
